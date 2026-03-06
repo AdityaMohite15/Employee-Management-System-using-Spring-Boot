@@ -22,6 +22,11 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 	
+	@RequestMapping("/home")
+	public String home() {
+		return "Welcome to Employee Management System";
+	}
+	
 	@GetMapping
 	public ResponseEntity<List<Employees>> getAllEmployees(){
 		return new ResponseEntity<>(employeeService.getAllEmployees(),HttpStatus.OK);
