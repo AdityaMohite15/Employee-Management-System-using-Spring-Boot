@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "8d8aa8e4-80e8-4730-93ba-1e884e376418",
+    "name": "EmployeeManagement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50671253",
+    "_collection_link": "https://go.postman.co/collection/50671253-8d8aa8e4-80e8-4730-93ba-1e884e376418?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "SaveEmployees",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"emp_Id\": 1,\r\n    \"emp_Name\": \"Shubham Dhumal\",\r\n    \"emp_email\": \"shubham@gmail.com\",\r\n    \"emp_Designation\": \"Frontend Developer\",\r\n    \"emp_Department\": \"Development\",\r\n    \"emp_Salary\": 35000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sign Up",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"Sahil Khot\",\r\n    \"password\": \"S#7676\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Log In",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"Viraj Govilkar\",\r\n    \"password\": \"viraj@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllEmployees",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "pass",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "Aditya",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : \"1\",\r\n    \"title\":\" Preparation\",\r\n    \"completed\": false\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetEmployeeById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : \"1\",\r\n    \"title\":\" Preparation\",\r\n    \"completed\": false\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/employees/9",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employees",
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteEmployee",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : \"1\",\r\n    \"title\":\" Preparation\",\r\n    \"completed\": false\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employees",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateEmployee",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"emp_Id\": 2,\r\n    \"emp_Name\": \"Viraj Govikar\",\r\n    \"emp_email\": \"viraj123@gmail.com\",\r\n    \"emp_Designation\": \"Frontend Developer\",\r\n    \"emp_Department\": \"Developent\",\r\n    \"emp_Salary\": 40000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/employees/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "employees",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
